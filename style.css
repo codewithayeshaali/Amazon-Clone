@@ -2,6 +2,10 @@
     margin: 0px;
     box-sizing: border-box;
     font-family: Arial;
+    html, body {
+    overflow-x: clip;
+}
+    
 }
 .navbar{
     background-color: #0f1111;
@@ -35,6 +39,13 @@
 }
 .border:hover{
     border: 1.5px solid white;
+    cursor: pointer;
+}
+.border a {
+    border: 1px solid transparent;
+}
+.border a :hover{
+    border: 1.5px solid black;
     cursor: pointer;
 }
 /*Box 2*/
@@ -124,29 +135,49 @@ span{
     
 }
 /*hero section*/
-.hero-section{
-    background-image: url(assets/hero_image.jpg);
-    background-size: cover;
-    height: 360px;
+.hero-section {
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
-   
+    height: 360px;
+    width: 100%;
+    position: relative;
 }
-.hero-msg{
-    background-color: white;
+
+.hero-left {
+    flex: 1;
+    background-color: rgb(50, 64, 102); 
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.875rem;
-    height: 40px;
-    width: 80%;
-    margin-bottom: 25px;
-
+    padding: 20px;
+    
 }
-.hero-msg p{
-    color: #007185;
 
+.hero-left h1 {
+    color: white;
+    font-size: 40px;
+    max-width: 400px;
+    margin-left: 110px;
+    margin-bottom: 80px;
+}
+
+
+.hero-right {
+    flex: 1;
+    background-image: url("assets/hero_image.jpg");
+    background-size: cover;
+    background-position: top;
+}
+.hero-msg {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    background-color: white;
+    padding: 10px;
+    font-size: 14px;
+    width: 80%;
+    text-align: center;
 }
 /*Shop Section*/
 .shop-section{
@@ -154,6 +185,7 @@ display: flex;
 flex-wrap: wrap;
 justify-content: space-evenly;
 background-color: #e2efe6;
+
 
 }
 .box{
@@ -329,6 +361,21 @@ ul a{
     background-size: cover;
     background-position: top;
 }
+.hero-left{
+    width: 95%;
+    height: auto;
+    flex: 1;
+    background-color: rgb(50, 64, 102); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px;
+}
+.hero-left h1{
+    margin-left: auto;
+    font-size: 15px;
+    margin-right: 5px;
+}
 
 .hero-msg{
     width: 95%;
@@ -454,6 +501,20 @@ ul a{
     background-size: cover;
     background-position: top;
 }
+.hero-left{
+    width: 95%;
+    height: auto;
+    flex: 1;
+    background-color: rgb(50, 64, 102); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px;
+}
+.hero-left h1{
+    margin-left: auto;
+    font-size: 20px;
+    margin-right: 15px;}
    .hero-msg{
     width: 95%;
     height: auto;
@@ -467,6 +528,9 @@ ul a{
     display: none;
 } 
 .shop-section{
+     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
         display: grid;
         grid-template-columns: repeat(2, 1fr); 
         gap: 15px;
